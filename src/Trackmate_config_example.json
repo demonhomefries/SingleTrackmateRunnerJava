@@ -1,0 +1,18 @@
+{
+    "microns_per_pixel": 0.325,
+    "detectorSettings": {
+        "TARGET_CHANNEL": 1,
+        "SIMPLIFY_CONTOURS": true,
+        "INTENSITY_THRESHOLD": 100.0
+    },
+    "featureFilterSettings": {
+        "FEATURE": "AREA",
+        "THRESHOLD": 50.0,
+        "IS_ABOVE": false
+    },
+    "kalmanSettings": {
+        "LINKING_MAX_DISTANCE": 5.0,
+        "KALMAN_SEARCH_RADIUS": 5.0,
+        "MAX_FRAME_GAP": 2
+    }
+}
