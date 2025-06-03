@@ -14,5 +14,9 @@
         "LINKING_MAX_DISTANCE": 5.0,
         "KALMAN_SEARCH_RADIUS": 5.0,
         "MAX_FRAME_GAP": 2
+    },
+    "displacementFilterParams": {
+        "lower": 128.6,
+        "upper": "inf"
     }
 }

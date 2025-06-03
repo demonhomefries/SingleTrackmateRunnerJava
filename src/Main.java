@@ -292,11 +292,19 @@ public class Main {
         String csvArgumentString = "\"" + spotsFilePath + ";" + tracksFilePath + "\"";
         System.out.println(csvArgumentString);
 
+        @SuppressWarnings("unchecked")
+        Map<String, Object> displacementFilterLimitsMap = (Map<String, Object>) trackmateConfigMap.get("displacementFilterParams");
+
+        Object displacementFilterLowerLimit = displacementFilterLimitsMap.get("lower");
+        Object displacementFilterUpperLimit = displacementFilterLimitsMap.get("upper");
+        String displacementFilterParamString = displacementFilterLowerLimit + ";" + displacementFilterUpperLimit;
+        
+
         System.out.println("Starting CSV Merger using Python...");
         try {
             // Build the process
             ProcessBuilder pb = new ProcessBuilder("python", "src\\Track-Spot_Merger_Auto.py", "--csvlist",
-                    csvArgumentString);
+                    csvArgumentString, "--displacement_filter_params", displacementFilterParamString);
 
             // Redirect error stream to capture all outputs
             pb.redirectErrorStream(true);
