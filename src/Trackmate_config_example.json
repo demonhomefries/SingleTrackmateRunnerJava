@@ -16,7 +16,7 @@
         "MAX_FRAME_GAP": 2
     },
     "displacementFilterParams": {
-        "lower": 128.6,
+        "lower": 38.6,
         "upper": "inf"
     }
 }
